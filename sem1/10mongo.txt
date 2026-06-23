@@ -1,0 +1,37 @@
+Step 1: Start MongoDB
+
+Step 2: Select (or Create) a Database
+
+Step 3: Choose (or Create) a Collection
+
+Step 4 ADD data Insert document open Window
+
+b.students.insertOn
+e({ name: "Ravi",
+age: 21,
+course: "Computer Science"
+})
+
+Step 5: Insert Multiple Documents
+
+db.student1.insertMany([
+{
+name:
+"Ravi", age:
+21,
+course: "Computer Science"
+},
+{
+name:
+"Priya",
+age: 22,
+course: "Information Technology"
+},
+{
+name:
+"Arun", age:
+20,
+course: "Data Science"
+}
+])
+
