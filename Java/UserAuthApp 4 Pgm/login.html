@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        form {
+            background: white;
+            width: 350px;
+            margin: 100px auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        .password-field {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            margin: 10px auto;
+        }
+
+        .password-field input {
+            flex: 1;
+            margin: 0;
+        }
+
+        .toggle-password {
+            margin-left: 10px;
+            padding: 10px 12px;
+            cursor: pointer;
+            background: #e9ecef;
+            border-radius: 5px;
+            font-weight: 600;
+            color: #333;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        button {
+            padding: 10px 25px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<form action="LoginServlet" method="post">
+    <h2>User Login</h2>
+
+    <input type="email" name="email" placeholder="Enter Email" required>
+    <div class="password-field">
+        <input id="loginPassword" type="password" name="password" placeholder="Enter Password" required>
+        <span class="toggle-password" onclick="togglePassword('loginPassword', this)" title="Show/Hide Password">[View]</span>
+    </div>
+
+    <button type="submit">Login</button>
+
+    <p>New user? <a href="register.html">Register here</a></p>
+</form>
+
+<script>
+    function togglePassword(id, element) {
+        const input = document.getElementById(id);
+        if (input.type === 'password') {
+            input.type = 'text';
+            element.textContent = '[Hide]';
+        } else {
+            input.type = 'password';
+            element.textContent = '[View]';
+        }
+    }
+</script>
+
+</body>
+</html>
